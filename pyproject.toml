@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "itisnotarecipe"
+version = "0.0.1"
+description = "YAML Driven Recipes"
+authors = ["bmistry12 <bmistry05@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jinja2 = "^3.1.4"
+pyyaml = "^6.0.1"
+pylint = "^3.2.6"
+flake8 = "^7.1.0"
+black = "^24.4.2"
+tryceratops = "^2.3.3"
+yamllint = "^1.35.1"
+
+[tool.black]
+line-length = 120
+target-version = ["py310", "py312"]
+extend-exclude = "./scripts"
+
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 120
+disable = "C0103, C0114, C0115, C0116, W1203"
+
+[tool.tryceratops]
+experimental = false
+check_pickable = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

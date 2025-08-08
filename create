@@ -1,0 +1,32 @@
+#!/bin/bash
+
+TOOLS_PATH="./tools"
+
+usage() {
+    echo "Usage: $0 {site|recipe|validate} [null|recipe_name|(y|n)]"
+    exit 1
+}
+
+if [ -z "$1" ]; then
+    usage
+fi
+
+case "${1}" in
+    site)
+        python "${TOOLS_PATH}/main.py"
+        ;;
+    recipe)
+        if [ -z "${2}" ]; then
+            echo "Error: Recipe name is required"
+            usage
+        fi
+        bash "${TOOLS_PATH}/new_recipe" "${2}"
+        ;;
+    validate)
+        bash "${TOOLS_PATH}/format" "${2}"
+        bash "${TOOLS_PATH}/lint" "${2}"
+        ;;
+    *)
+        usage
+        ;;
+esac
