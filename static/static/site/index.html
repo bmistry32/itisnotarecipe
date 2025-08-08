@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <a href="index.html" class="logo">itisnotarecipe</a>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="https://github.com/bmistry12/itisnotarecipe">Source</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        
+
+<h2>Recipes</h2>
+<input type="text" id="search" placeholder="Search the tagged abyss..." onkeyup="filterRecipes()">
+
+<div id="recipe-tag-list">
+    
+    <div class="tag-section">
+        <h3>Black Beans</h3>
+        <ul>
+        
+            <li><a href="meatball_black_bean_chilli.html">MEATBALL BLACK BEAN CHILLI</a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="tag-section">
+        <h3>Bread</h3>
+        <ul>
+        
+            <li><a href="focaccia.html">FOCACCIA</a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="tag-section">
+        <h3>Burger</h3>
+        <ul>
+        
+            <li><a href="apple_pork_burger.html">APPLE PORK BURGER</a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="tag-section">
+        <h3>Chickpea</h3>
+        <ul>
+        
+            <li><a href="chorizo_chickpea_salad.html">CHORIZO CHICKPEA SALAD</a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="tag-section">
+        <h3>Chorizo</h3>
+        <ul>
+        
+            <li><a href="chorizo_chickpea_salad.html">CHORIZO CHICKPEA SALAD</a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="tag-section">
+        <h3>Lentils</h3>
+        <ul>
+        
+            <li><a href="lentil_shephards_pie.html">LENTIL SHEPHARDS PIE</a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="tag-section">
+        <h3>Mediterranean</h3>
+        <ul>
+        
+            <li><a href="fried_aubergine_salad.html">FRIED AUBERGINE AND SALAD</a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="tag-section">
+        <h3>Pie</h3>
+        <ul>
+        
+            <li><a href="lentil_shephards_pie.html">LENTIL SHEPHARDS PIE</a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="tag-section">
+        <h3>Pork</h3>
+        <ul>
+        
+            <li><a href="apple_pork_burger.html">APPLE PORK BURGER</a></li>
+        
+            <li><a href="meatball_black_bean_chilli.html">MEATBALL BLACK BEAN CHILLI</a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="tag-section">
+        <h3>Salad</h3>
+        <ul>
+        
+            <li><a href="chorizo_chickpea_salad.html">CHORIZO CHICKPEA SALAD</a></li>
+        
+            <li><a href="fried_aubergine_salad.html">FRIED AUBERGINE AND SALAD</a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="tag-section">
+        <h3>Salmon</h3>
+        <ul>
+        
+            <li><a href="salmon_with_mushroom_and_spinach.html">SALMON WITH MUSHROOM AND SPINACH</a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="tag-section">
+        <h3>Stir Fry</h3>
+        <ul>
+        
+            <li><a href="tofu_stir_fry.html">TOFU STIR FRY</a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="tag-section">
+        <h3>Tag1</h3>
+        <ul>
+        
+            <li><a href="butter_chicken.html">BUTTER CHICKEN</a></li>
+        
+            <li><a href="butter_paneer.html">BUTTER PANEER</a></li>
+        
+            <li><a href="jerk_pork.html">JERK PORK</a></li>
+        
+            <li><a href="mushroom_sauce.html">MUSHROOM SAUCE</a></li>
+        
+            <li><a href="salmon_with_sauce_and_spinach.html">SALMON WITH SAUCE AND SPINACH</a></li>
+        
+            <li><a href="thai_red_curry.html">THAI RED CURRY</a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="tag-section">
+        <h3>Tofu</h3>
+        <ul>
+        
+            <li><a href="tofu_stir_fry.html">TOFU STIR FRY</a></li>
+        
+        </ul>
+    </div>
+    
+    </div>
+</div>
+<br>
+<hr>
+<br>
+<div id="recipe-diet-list"></div>
+    
+    <div class="diet-section">
+        <h3>Baking</h3>
+        <ul>
+            
+            <li><a href="focaccia.html">FOCACCIA</a></li>
+            
+        </ul>
+    </div>
+    
+    <div class="diet-section">
+        <h3>Fish</h3>
+        <ul>
+            
+            <li><a href="salmon_with_mushroom_and_spinach.html">SALMON WITH MUSHROOM AND SPINACH</a></li>
+            
+            <li><a href="salmon_with_sauce_and_spinach.html">SALMON WITH SAUCE AND SPINACH</a></li>
+            
+        </ul>
+    </div>
+    
+    <div class="diet-section">
+        <h3>Meat</h3>
+        <ul>
+            
+            <li><a href="apple_pork_burger.html">APPLE PORK BURGER</a></li>
+            
+            <li><a href="butter_chicken.html">BUTTER CHICKEN</a></li>
+            
+            <li><a href="chorizo_chickpea_salad.html">CHORIZO CHICKPEA SALAD</a></li>
+            
+            <li><a href="jerk_pork.html">JERK PORK</a></li>
+            
+            <li><a href="meatball_black_bean_chilli.html">MEATBALL BLACK BEAN CHILLI</a></li>
+            
+            <li><a href="thai_red_curry.html">THAI RED CURRY</a></li>
+            
+        </ul>
+    </div>
+    
+    <div class="diet-section">
+        <h3>Vegetarian</h3>
+        <ul>
+            
+            <li><a href="butter_paneer.html">BUTTER PANEER</a></li>
+            
+            <li><a href="fried_aubergine_salad.html">FRIED AUBERGINE AND SALAD</a></li>
+            
+            <li><a href="lentil_shephards_pie.html">LENTIL SHEPHARDS PIE</a></li>
+            
+            <li><a href="mushroom_sauce.html">MUSHROOM SAUCE</a></li>
+            
+            <li><a href="tofu_stir_fry.html">TOFU STIR FRY</a></li>
+            
+        </ul>
+    </div>
+    
+    <div class="diet-section">
+        <h3>Vegetarian Alternative Possible</h3>
+        <ul>
+            
+            <li><a href="meatball_black_bean_chilli.html">MEATBALL BLACK BEAN CHILLI</a></li>
+            
+        </ul>
+    </div>
+    
+</div>
+
+    </main>
+    </br>   
+    <footer>
+        <p>&copy; 2024 itisnotamystery</p>
+    </footer>
+</body>
+</html>

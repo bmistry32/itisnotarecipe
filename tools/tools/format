@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DRY_RUN=${1-"n"}
+
+if [[ ${DRY_RUN} == "y" ]]; then
+    python -m black "./" --check
+else
+    python -m black "./"
+fi

@@ -1,0 +1,15 @@
+---
+title: Title
+tags:
+  - Tag1
+diet:
+  - Baking | Fish | Meat | Vegetarian | Vegetarian Alternative Possible
+ingredients:
+  - Ingredient 2
+optional_ingredients:
+  - Optional Ingredient
+main_instructions:
+  - Instruction for main part of dish
+side_instructions:
+  - Instruction for side part of dish
+image_path: "image"

@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f2fbdb
+}
+
+header,
+footer {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 0
+}
+
+h1 {
+    color: #000
+}
+
+h2 {
+    color: #16a06b
+}
+
+h3 {
+    color: #16a089
+}
+
+ul,
+ol {
+    margin: 10px 0
+}
+
+li {
+    margin: 5px 0
+}
+
+.ingredients,
+.instructions {
+    margin-bottom: 20px
+}
+
+.tags {
+    margin-bottom: 10px
+}
+
+.diet {
+    color: #000;
+    background-color: #add8e6;
+    border: #add8e6
+}
+
+a {
+    color: #006400;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #16a085
+}
+
+kbd {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: 2px 4px
+}
+
+#search {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 10px
+}
+
+.tag-section,
+.diet-section {
+    margin-bottom: 20px
+}
+
+#recipe-list {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.tag-section,
+.diet-section {
+    flex: 1 1 300px;
+    padding: 10px
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px
+}
+
+.navbar a.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px
+}
+
+.nav-links a {
+    color: #000;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: #f2fbdb
+}
+
+.nav-links a:hover {
+    color: #fff;
+    background-color: #16a085
+}
+
+.icon {
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer
+}
+
+@media screen and (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column
+    }
+
+    .nav-links a {
+        padding: 15px;
+        text-align: center
+    }
+
+    .icon {
+        display: block
+    }
+}
+
+.flipswitch {
+    position: relative;
+    width: 86px;
+}
+
+.flipswitch input[type=checkbox] {
+    display: none;
+}
+
+.flipswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #999999;
+    border-radius: 8px;
+}
+
+.flipswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.flipswitch-inner:before,
+.flipswitch-inner:after {
+    float: left;
+    width: 50%;
+    height: 24px;
+    padding: 0;
+    line-height: 24px;
+    font-size: 18px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.flipswitch-inner:before {
+    content: "Hide";
+    padding-left: 14px;
+    background-color: black;
+    color: #FFFFFF;
+}
+
+.flipswitch-inner:after {
+    content: "Show";
+    padding-right: 6px;
+    background-color: white;
+    color: black;
+    text-align: right;
+}
+
+.flipswitch-switch {
+    width: 28px;
+    margin: -2px;
+    background: #f2fbdb;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 60px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.flipswitch-switch:hover {
+    background: #16a085;
+}
+
+.flipswitch-cb:checked+.flipswitch-label .flipswitch-inner {
+    margin-left: 0;
+}
+
+.flipswitch-cb:checked+.flipswitch-label .flipswitch-switch {
+    right: 0;
+}

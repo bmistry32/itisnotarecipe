@@ -1,0 +1,259 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9ff;
+    color: #333;
+}
+
+/* Header and Footer */
+header, footer {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+h1 {
+    color: #16a06b;
+    font-size: 2.0em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #16a06b;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #16a089;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* Lists */
+ul, ol {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style: square;
+}
+
+li {
+    margin: 5px 0;
+}
+
+/* Sections */
+.ingredients, .instructions, .tags, .diet-section {
+    margin-bottom: 20px;
+}
+
+.ingredients, .instructions {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    background-color: #fcfff2;
+    padding: 8px;
+    padding-top: 0%;
+    border-radius:0 0 30px/45px 0;
+    overflow:hidden;
+}
+
+/* Tags */
+.tags {
+    margin-bottom: 10px;
+}
+
+.diet {
+    color: #000;
+    background-color: #add8e6;
+    border: #add8e6
+}
+
+/* Links */
+a {
+    color: #16a085;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0e6655;
+}
+
+/* Code */
+kbd {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-size: 125%;
+}
+
+/* Search Input */
+#search {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+#search:focus {
+    border-color: #16a085;
+}
+
+/* Recipe List */
+#recipe-diet-list, #recipe-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tag-section, .diet-section {
+    flex: 1 1 300px;
+    padding: 10px;
+    /* background-color: #fcfff2; */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 10px;
+}
+
+.navbar a.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: #16a085;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #16a085;
+    background-color: #fcfff2;
+}
+
+.icon {
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .icon {
+        display: block;
+    }
+}
+
+/* Flipswitch */
+.flipswitch {
+    position: relative;
+    width: 10%;
+}
+
+.flipswitch input[type=checkbox] {
+    display: none;
+}
+
+.flipswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #999;
+    border-radius: 8px;
+    background-color: #f2fbdb;
+}
+
+.flipswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in-out;
+}
+
+.flipswitch-inner:before, .flipswitch-inner:after {
+    float: left;
+    width: 50%;
+    height: 24px;
+    padding: 0;
+    line-height: 24px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.flipswitch-inner:before {
+    content: "Hide Search";
+    padding-left: 14px;
+    background-color: #000;
+}
+
+.flipswitch-inner:after {
+    content: "Search Tags";
+    padding-right: 14px;
+    background-color: white;
+    color: #000;
+    text-align: right;
+}
+
+.flipswitch-switch {
+    width: 28px;
+    margin: -2px;
+    background: #16a085;
+    border: 2px solid #000;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 90%;
+    transition: all 0.3s ease-in-out;
+}
+
+.flipswitch-switch:hover {
+    background: #fcfff2;
+}
+
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-inner {
+    margin-left: 0;
+}
+
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-switch {
+    right: 0;
+}

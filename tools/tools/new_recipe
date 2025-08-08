@@ -1,0 +1,13 @@
+#!/bin/bash
+
+RECIPE_NAME=${1-"new_recipe"}
+recipe_template="./tools/templates/recipe.yaml"
+output_file="./recipes"
+
+file="${output_file}/${RECIPE_NAME}.yaml"
+cp ${recipe_template} ${file}
+name=$(echo $RECIPE_NAME | tr _ " ")
+recipe=${name[@]^^}
+sed -i "s/Title/${recipe}/g" ${file}
+
+echo "Created ${file}..."

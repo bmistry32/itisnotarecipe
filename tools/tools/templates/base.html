@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <a href="index.html" class="logo">itisnotarecipe</a>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="https://github.com/bmistry12/itisnotarecipe">Source</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    </br>   
+    <footer>
+        <p>&copy; 2024 itisnotamystery</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Recipes</h2>
+<input type="text" id="search" placeholder="Search the tagged abyss..." onkeyup="filterRecipes()">
+
+<div id="recipe-tag-list">
+    {% for tag, recipes in recipes_by_tag.items() %}
+    <div class="tag-section">
+        <h3>{{ tag }}</h3>
+        <ul>
+        {% for recipe in recipes %}
+            <li><a href="{{ recipe.filename }}">{{ recipe.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+<br>
+<hr>
+<br>
+<div id="recipe-diet-list"></div>
+    {% for tag, recipes in recipes_by_diet.items() %}
+    <div class="diet-section">
+        <h3>{{ tag }}</h3>
+        <ul>
+            {% for recipe in recipes %}
+            <li><a href="{{ recipe.filename }}">{{ recipe.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

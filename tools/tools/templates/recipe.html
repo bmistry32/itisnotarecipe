@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ title }}</h1>
+    {% if tags or diet %}
+    <div class="tags">
+        {% if tags %}
+            {% for tag in tags %}
+            <kbd>{{ tag }}</kbd>
+            {% endfor %}
+        {% endif %}
+
+        {% if diet %}
+            {% for type in diet %}
+            <kbd class="diet">{{ type }}</kbd>
+            {% endfor %}
+        {% endif %}
+    </div>
+    {% endif %}
+    </br>
+    <div>
+        <div class="ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+                {% for ingredient in ingredients %}
+                <li>{{ ingredient }}</li>
+                {% endfor %}
+            </ul>
+
+            {% if optional_ingredients %}
+            <h3>Optional Ingredients</h3>
+            <ul>
+                {% for ingredient in optional_ingredients %}
+                <li>{{ ingredient }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <ol>
+                {% for instruction in main_instructions %}
+                <li>{{ instruction }}</li>
+                {% endfor %}
+            </ol>
+
+            {% if side_instructions %}
+            <h3>Second part of dish</h3>
+            <ol>
+                {% for instruction in side_instructions %}
+                <li>{{ instruction }}</li>
+                {% endfor %}
+            </ol>
+            {% endif %}
+        </div>
+    </div>
+    {% if image_path %}
+    <div class="image">
+        <img src="../images/{{ image_path }}.jpg" alt="Recipe Image" width="50%">
+    </div>
+    {% endif %}
+{% endblock %}

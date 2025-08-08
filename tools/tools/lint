@@ -1,0 +1,13 @@
+#!/bin/bash
+
+AUTOFIX=${1-"y"}
+
+flake8 --config="./setup.cfg"
+python -m pylint --recursive=y "./"
+python -m tryceratops "./"
+
+if [[ ${AUTOFIX} == "y" ]]; then
+    python -m tryceratops ./  --autofix
+fi
+
+python -m yamllint -d "{extends: default, rules: {line-length: {max: 120}}}" "."
